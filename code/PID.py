@@ -33,8 +33,9 @@ patterns = {
 
 patterns_black_line = {
     (0,0,0,0,0,0,0,0):1,
-    (1,1,1,1,0,0,0,0):2,
-    (0,0,0,0,1,1,1,1):3,
+    (1,1,1,0,0,0,0,0):2,
+    (0,0,0,0,0,1,1,1):3,
+    (1,1,1,0,0,1,1,1):4
 }
 
 # senser avg
@@ -208,11 +209,11 @@ def motor_contro(pid):#ทำการปรับจูนค่าความ
     
     return left_speed_motor,right_speed_motor  
 
-PID_error = PID_cal(ReadSensor())
+# PID_error = PID_cal(ReadSensor())11
 
-sp_left , sp_rigth = motor_contro(PID_error) 
+# sp_left , sp_rigth = motor_contro(PID_error) 
 
-forward(sp_left,sp_rigth)
+# forward(sp_left,sp_rigth)
 
 ######################## การทำงานพื้นฐาน ######################
 
